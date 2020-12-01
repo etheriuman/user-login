@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const login = require('./modules/login')
+const login = require('./modules/login.js')
 
 router.use('/login', login)
 
