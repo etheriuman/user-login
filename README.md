@@ -1,5 +1,6 @@
 # 使用者登入系統
-  實現使用者登入與註冊功能，將資料存儲於資料庫。
+  實現使用者登入與註冊功能，將資料存儲於資料庫。  
+  ![image]()
 ---
 - ## 運行環境需求:
   Node.js
@@ -56,7 +57,7 @@ npm run seed
 ```
 npm run dev
 ```
-9. 將回傳的網址貼到瀏覽器中：
+9. 將回傳的網址貼到瀏覽器中：
 ```
 the express server is listening on http://localhost:3000/login
 ```
