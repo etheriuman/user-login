@@ -1,16 +1,28 @@
 <div class="container justify-content-center my-5">
   <div class="row justify-content-center text-center my-5">
-    <h2 class="col-8">User Login</h2>
+    <h1 class="col-8">User Login</h1>
   </div>
   <form class="row justify-content-center" method="POST">
     <div class="form-group col-8 mb-5 text-center">
-      <label for="emailInput">Email address</label>
-      <input name="email" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
+      <label for="emailInput"><h3>Email address</h3></label>
+      <input name="email" type="email" value="{{email}}" class="form-control {{#if wrongEmail}}is-invalid{{/if}}" id="emailInput" aria-describedby="emailHelp" required>
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      {{#if wrongEmail}}
+        <div class="invalid-feedback">
+          The account dosen't exist.
+          <a href="login/register">Register an new account?</a> 
+        </div>
+      {{/if}}
     </div>
     <div class="form-group col-8 mb-5 text-center">
-      <label for="passwordInput">Password</label>
-      <input name="password" type="password" class="form-control" id="passwordInput" required>
+      <label for="passwordInput"><h3>Password</h3></label>
+      <input name="password" type="password" class="form-control {{#if wrongPassword}}is-invalid{{/if}}" id="passwordInput" required>
+      {{#if wrongPassword}}
+        <div class="invalid-feedback">
+          Wrong password.
+          <a href="">Forget your password?</a> 
+        </div>
+      {{/if}}
     </div>
     <div class="form-group col-8 text-center">
       <button type="submit" class="btn btn-primary">Login</button>
